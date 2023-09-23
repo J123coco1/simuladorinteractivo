@@ -1,45 +1,51 @@
+console.log("1.- MXN A USD");
+console.log("2.- MXN A EUR");
+console.log("3.- EUR A USD");
+console.log("4.- EUR A MXN");
+console.log("5.- USD A EUR");
+console.log("6.- USD A MXN");
 
+let respuesta = prompt("Selecciona el número que corresponda al tipo de cambio que deseas: ");
+let unidades = parseFloat(prompt("Cuánto dinero deseas cambiar?"));
 
+if (isNaN(unidades)) {
+    alert("Por favor, ingresa una cantidad valida para realizar el cambio de divisas :D ");
+} else {
+    let change;
 
-let primero = prompt("¿Que moneda desea cambiar?  USD/MXN/EUR");
-var numerounidades = parseFloat(prompt("¿Cuánto deseas cambiar?"));
-
-//MXN A DIFERENTES MONEDAS USD//EUR
-if(primero === "MXN" || primero === "mxn"){
-   let pdolar = 0.058;
-   let peuro = 0.054;
-   dolar = numerounidades * pdolar;
-   euro = numerounidades * peuro;
-   console.log( "$" + numerounidades + " MXN" + " equivalen a " + "$" + dolar + " USD");
-   console.log( "$" + numerounidades + " MXN" + " equivalen a " + "€" + euro + " EUR");
-   alert( "$" + numerounidades + " MXN" + " equivalen a " + "$" + dolar + " USD");
-   alert( "$" + numerounidades + " MXN" + " equivalen a " + "€" + euro + " EUR");
-}
-
-else if( primero === "USD" || primero === "usd") {
-    let ppeso = 17.12;
-    let peuro = 0.93;
-    peso = numerounidades * ppeso;
-    euro = numerounidades * peuro;
-    
-    console.log( "$" + numerounidades + " USD" + " equivalen a " + "$" + peso + " MXN");
-    console.log( "$" + numerounidades + " USD" + " equivalen a " + "€" + euro + " EUR");
-    alert( "$" + numerounidades + " USD" + " equivalen a " + "$" + peso + " MXN");
-    alert( "$" + numerounidades + " USD" + " equivalen a " + "€" + euro + " EUR");
-}
-
-else if( primero === "EUR" || primero === "eur") {
-    let ppeso = 18.40;
-    let pusd = 1.07;
-    peso = numerounidades * ppeso;
-    usd = numerounidades * pusd;
-    
-    console.log( "€" + numerounidades + " EUR" + " equivalen a " + "$" + peso + " MXN");
-    console.log( "€" + numerounidades + " EUR" + " equivalen a " + "$" + usd + " USD");
-    alert( "€" + numerounidades + " EUR" + " equivalen a " + "$" + peso + " MXN");
-    alert( "€" + numerounidades + " EUR" + " equivalen a " + "$" + usd + " USD");
-}
-
-else {
-    alert("Lo sentimos, no se puede realizar la conversion al tipo de moneda especificada :(");
+    switch (respuesta) {
+        case "1":
+            let dolaraMXN = 0.058;
+            change = unidades * dolaraMXN;
+            alert("$" + unidades + " es igual a " + "$" + change.toFixed(2) + " dólares.");
+            break;
+        case "2":
+            let euroaMXN = 0.055;
+            change = unidades * euroaMXN;
+            alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+            break;
+        case "3":
+            let euroaUSD = 1.07;
+            change = unidades * euroaUSD;
+            alert("€" + unidades + " es igual a " + "$" + change.toFixed(2) + " dólares.");
+            break;
+        case "4":
+            let pesoaEuro = 18.32;
+            change = unidades * pesoaEuro;
+            alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+            break;
+        case "5":
+            let usdaEuro = 0.94;
+            change = unidades * usdaEuro;
+            alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+            break;
+        case "6":
+            let usdaMXN = 17.19;
+            change = unidades * usdaMXN;
+            alert("$" + unidades + " es igual a " + "$" + change.toFixed(2) + " pesos.");
+            break;
+        default:
+            alert("El tipo de cambio que elegiste no es válido, inténtalo de nuevo :D");
+            break;
+    }
 }
