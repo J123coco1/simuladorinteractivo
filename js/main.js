@@ -1,3 +1,19 @@
+const tiposDeCambio = {
+    "1": { nombre: "MXN A USD", tasa: 0.058 },
+    "2": { nombre: "MXN A EUR", tasa: 0.055 },
+    "3": { nombre: "EUR A USD", tasa: 1.07 },
+    "4": { nombre: "EUR A MXN", tasa: 18.32 },
+    "5": { nombre: "USD A EUR", tasa: 0.94 },
+    "6": { nombre: "USD A MXN", tasa: 17.19 }
+};
+
+const unidadesDeMoneda = [
+    { nombre: "MXN", cantidad: 0 },
+    { nombre: "USD", cantidad: 0 },
+    { nombre: "EUR", cantidad: 0 }
+];
+
+
 let seguir = true;
 
 while (seguir) {
@@ -25,38 +41,38 @@ while (seguir) {
     if (isNaN(unidades)) {
         alert("Por favor, ingresa una cantidad valida para realizar el cambio de divisas :D ");
     } else {
-        let change;
+        let cambio;
 
         switch (respuesta) {
             case "1":
                 let dolaraMXN = 0.058;
-                change = unidades * dolaraMXN;
-                alert("$" + unidades + " es igual a " + "$" + change.toFixed(2) + " dólares.");
+                cambio = unidades * dolaraMXN;
+                alert("$" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " dólares.");
                 break;
             case "2":
                 let euroaMXN = 0.055;
-                change = unidades * euroaMXN;
-                alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+                cambio = unidades * euroaMXN;
+                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
                 break;
             case "3":
                 let euroaUSD = 1.07;
-                change = unidades * euroaUSD;
-                alert("€" + unidades + " es igual a " + "$" + change.toFixed(2) + " dólares.");
+                cambio = unidades * euroaUSD;
+                alert("€" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " dólares.");
                 break;
             case "4":
                 let pesoaEuro = 18.32;
-                change = unidades * pesoaEuro;
-                alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+                cambio = unidades * pesoaEuro;
+                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
                 break;
             case "5":
                 let usdaEuro = 0.94;
-                change = unidades * usdaEuro;
-                alert("$" + unidades + " es igual a " + "€" + change.toFixed(2) + " euros.");
+                cambio = unidades * usdaEuro;
+                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
                 break;
             case "6":
                 let usdaMXN = 17.19;
-                change = unidades * usdaMXN;
-                alert("$" + unidades + " es igual a " + "$" + change.toFixed(2) + " pesos.");
+                cambio = unidades * usdaMXN;
+                alert("$" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " pesos.");
                 break;
             default:
                 alert("El tipo de cambio que elegiste no es válido, inténtalo de nuevo :D");
@@ -66,3 +82,4 @@ while (seguir) {
 
 }
 
+// / <script src="/js/main.js"></script>
