@@ -4,6 +4,7 @@
     box-sizing: border-box
 }
 
+/*BARRA DE NAVEGACION*/
 header{
     display: flex;
     justify-content: space-between;
@@ -37,34 +38,47 @@ nav a{
 }
 
 h1{
+    font-size: 50px;
+    margin: 50px;
     text-align: center;
+    text-decoration: underline;
 }
 
-main .contenedor-sim{
-    width: 50%;
-    margin: auto;
+/*PAGINA PRINCIPAL*/
+.formulario{
+    margin: 80px;
+    height: auto;
+    width: auto;
+    font-size: 19px;
+    font-family: monospace;
     text-align: center;
-    padding: 20px;
-}
-
-.contenedor-sim{
-
     background-color: aqua;
-    text-align: center;
-    width: 1000px;
-    height: 500px;
+    
 }
 
-.sim h2{
-    padding: 25px;
-
+.formulario p{
+    font-size: 30px;
 }
 
-.sim select{
-    padding: 10px;
+.radio-input{
+    margin-right: 5px;
+    margin: 35px;
 }
 
-.sim button{
-    padding-top: 15px;
+.valor{
+    width: 200px;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 7px;
 }
+
+.convertir{
+    background-color: gray;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
 

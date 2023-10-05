@@ -24,48 +24,26 @@
         </nav>
     </header>
 
-
     <main>
+        <h1>Convertidor de Divisas</h1>
 
-        <h1>Convertidos de Divisas</h1>
+        <form class="formulario">
+            <p>Que moneda desea convertir:</p> 
+            <input type="radio" id="uno-eur" class="radio-input">EUR 
+            <input type="radio" id="uno-mxn" class="radio-input">MXN
+            <input type="radio" id="uno-usd" class="radio-input">USD
 
-        <div class="contenedor-sim">
-            <div class="sim">
-                <h2>Selecciona Divisas a convertir</h2>
-                <select name="divisas" id="divisas">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="MXN">MXN</option>
-                </select>
+            <p>A cual moneda desea convertir:</p> 
+            <input type="radio" id="dos-eur" class="radio-input">EUR
+            <input type="radio" id="dos-mxn" class="radio-input">MXN
+            <input type="radio" id="dos-usd" class="radio-input">USD
 
-                <h2>a</h2>
-                <select name="divisas" id="divisas">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="MXN">MXN</option>
-                </select> <br>
+            <p>Cual seria el monto a convertir:</p>
+            <input type="number" class="valor" min="1" max="100000000"> <br> 
+            <button class="convertir">CONVERTIR</button>
+        </form>
 
-                <button type="submit" class="convertir">Convertir</button>
-                <h2>es</h2>
-                <h3>Resultado</h3>
-            </div>
-        </div>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+//objetos
 const tiposDeCambio = {
     "1": { nombre: "MXN A USD", tasa: 0.058 },
     "2": { nombre: "MXN A EUR", tasa: 0.055 },
@@ -7,6 +8,7 @@ const tiposDeCambio = {
     "6": { nombre: "USD A MXN", tasa: 17.19 }
 };
 
+//array
 const unidadesDeMoneda = [
     { nombre: "MXN", cantidad: 0 },
     { nombre: "USD", cantidad: 0 },
