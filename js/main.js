@@ -16,6 +16,8 @@ const unidadesDeMoneda = [
 ];
 
 
+
+
 let seguir = true;
 
 while (seguir) {
@@ -43,42 +45,13 @@ while (seguir) {
     if (isNaN(unidades)) {
         alert("Por favor, ingresa una cantidad valida para realizar el cambio de divisas :D ");
     } else {
-        let cambio;
+        let tipoCambio = tiposDeCambio[respuesta];
 
-        switch (respuesta) {
-            case "1":
-                let dolaraMXN = 0.058;
-                cambio = unidades * dolaraMXN;
-                alert("$" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " dólares.");
-                break;
-            case "2":
-                let euroaMXN = 0.055;
-                cambio = unidades * euroaMXN;
-                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
-                break;
-            case "3":
-                let euroaUSD = 1.07;
-                cambio = unidades * euroaUSD;
-                alert("€" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " dólares.");
-                break;
-            case "4":
-                let pesoaEuro = 18.32;
-                cambio = unidades * pesoaEuro;
-                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
-                break;
-            case "5":
-                let usdaEuro = 0.94;
-                cambio = unidades * usdaEuro;
-                alert("$" + unidades + " es igual a " + "€" + cambio.toFixed(2) + " euros.");
-                break;
-            case "6":
-                let usdaMXN = 17.19;
-                cambio = unidades * usdaMXN;
-                alert("$" + unidades + " es igual a " + "$" + cambio.toFixed(2) + " pesos.");
-                break;
-            default:
-                alert("El tipo de cambio que elegiste no es válido, inténtalo de nuevo :D");
-                break;
+        if (tipoCambio) {
+            let cambio = unidades * tipoCambio.tasa;
+            alert("$" + unidades + " es igual a " + tipoCambio.nombre + ": " + cambio.toFixed(2));
+          } else {
+            alert("El tipo de cambio que elegiste no es válido, inténtalo de nuevo :D");
         }
     }
 
