@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +7,12 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header>
         <a href="index.html" class="logotipo">
             <img src="IMG/un lobo con col 1.png" alt="" width="100px">
             <h2>Proyectos JS</h2>
         </a>
-
         <nav>
             <a href="">Convertidor de Divisas</a>
             <a href="">Calculadora</a>
@@ -26,24 +22,21 @@
 
     <main>
         <h1>Convertidor de Divisas</h1>
-
         <form class="formulario">
             <p>Que moneda desea convertir:</p> 
-            <input type="radio" id="uno-eur" class="radio-input">EUR 
-            <input type="radio" id="uno-mxn" class="radio-input">MXN
-            <input type="radio" id="uno-usd" class="radio-input">USD
+            <input type="radio" id="uno-mxn" class="radio-input" name="origen" value="MXN">MXN 
+            <input type="radio" id="uno-usd" class="radio-input" name="origen" value="USD">USD
+            <input type="radio" id="uno-eur" class="radio-input" name="origen" value="EUR">EUR
 
-            <p>A cual moneda desea convertir:</p> 
-            <input type="radio" id="dos-eur" class="radio-input">EUR
-            <input type="radio" id="dos-mxn" class="radio-input">MXN
-            <input type="radio" id="dos-usd" class="radio-input">USD
+            <p>A cuál moneda desea convertir:</p> 
+            <input type="radio" id="dos-mxn" class="radio-input" name="destino" value="MXN">MXN
+            <input type="radio" id="dos-usd" class="radio-input" name="destino" value="USD">USD
+            <input type="radio" id="dos-eur" class="radio-input" name="destino" value="EUR">EUR
 
-            <p>Cual seria el monto a convertir:</p>
+            <p>Cuál sería el monto a convertir:</p>
             <input type="number" class="valor" min="1" max="100000000"> <br> 
-            <button class="convertir">CONVERTIR</button>
+            <button type="button" class="convertir">CONVERTIR</button>
         </form>
-
     </main>
 </body>
-
 </html>
