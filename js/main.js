@@ -26,25 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (!origen || !destino) {
-            alert("Por favor, selecciona las monedas de origen y destino.");
+            Swal.fire('Por favor, selecciona las monedas de origen y destino.');
             return;
         }
 
         const valor = parseFloat(valorInput.value);
 
         if (isNaN(valor)) {
-            alert("Ingresa un valor numérico válido.");
+            Swal.fire('Ingresa un valor numérico válido.')
             return;
         }
 
         const tipoCambio = tiposDeCambio.find(cambio => cambio.origen === origen && cambio.destino === destino);
 
         if (!tipoCambio) {
-            alert("No se encontró un tipo de cambio válido.");
+            Swal.fire('No se encontró un tipo de cambio válido.')
             return;
         }
-
+ 
         const resultado = valor * tipoCambio.tasa;
-        alert(`${valor} ${origen} a ${destino}: ${resultado.toFixed(2)}`);
+        Swal.fire(`El resultado de la conversion es:  $ ${resultado.toFixed(2)}`) 
     });
 });
